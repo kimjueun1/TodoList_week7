@@ -213,25 +213,28 @@ public class TodoUtil {
 	}
 	
 	public static void find(TodoList l, String word) {
-		int count=0;
+		int count=0, count2=0;
 		for (TodoItem item : l.getList()) {
 			count++;
 			if (item.getTitle().contains(word) || item.getDesc().contains(word)) {
 				System.out.println(count+"."+item.toString());
+				count2++;
 			
 			}
 		}
+		System.out.println("총 "+count2+"개의 항목 찾음");
 	}
 	
 	public static void find_cate(TodoList l, String cate) {
-		int count=0;
+		int count=0, count2=0;
 		for (TodoItem item : l.getList()) {
 			count++;
 			if (item.getCategory().contains(cate)) {
 				System.out.println(count+"."+item.toString());
-			
+				count2++;
 			}
 		}
+		System.out.println("총 "+count2+"개의 항목 찾음");
 	}
 	
 }
