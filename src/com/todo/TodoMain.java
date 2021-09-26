@@ -27,7 +27,7 @@ public class TodoMain {
 				break;
 			
 			case "del":
-				TodoUtil.deleteItem(l);
+				TodoUtil.deleteItem(l);	
 				break;
 				
 			case "edit":
@@ -35,7 +35,11 @@ public class TodoMain {
 				break;
 				
 			case "ls":
-				TodoUtil.listAll(l);
+				isList = true;
+				break;
+			
+			case "ls_cate":
+				TodoUtil.ls_cate(l);
 				break;
 
 			case "ls_name_asc":
@@ -56,9 +60,26 @@ public class TodoMain {
 				System.out.println("날짜순 정렬 완료.");
 				isList = true;
 				break;
+				
+			case "ls_date_desc":
+				l.sortByDate();
+				l.reverseList();
+				System.out.println("역날짜순 정렬 완료.");
+				isList = true;
+				break;
 			
 			case "help":
 				Menu.displaymenu();
+				break;
+				
+			case "find":
+				String word = sc.next();
+				TodoUtil.find(l, word);
+				break;
+			
+			case "find_cate":
+				String cate = sc.next();
+				TodoUtil.find_cate(l, cate);
 				break;
 
 			case "exit":
@@ -70,7 +91,7 @@ public class TodoMain {
 				break;
 			}
 			
-			if(isList) l.listAll();
+			if(isList) TodoUtil.listAll(l);
 		} while (!quit);
 		TodoUtil.saveList(l, "todolist.txt");
 	}
