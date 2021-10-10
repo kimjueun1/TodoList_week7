@@ -44,27 +44,27 @@ public class TodoMain {
 
 			case "ls_name_asc":
 				l.sortByName();
-				System.out.println("ÀÌ¸§¼ø Á¤·Ä ¿Ï·á.");
+				System.out.println("ì´ë¦„ìˆœ ì •ë ¬ ì™„ë£Œ.");
 				isList = true;
 				break;
 
 			case "ls_name_desc":
 				l.sortByName();
 				l.reverseList();
-				System.out.println("¿ªÀÌ¸§¼ø Á¤·Ä ¿Ï·á.");
+				System.out.println("ì—­ ì´ë¦„ìˆœ ì •ë ¬ ì™„ë£Œ.");
 				isList = true;
 				break;
 				
 			case "ls_date":
 				l.sortByDate();
-				System.out.println("³¯Â¥¼ø Á¤·Ä ¿Ï·á.");
+				System.out.println("ë‚ ì§œìˆœ ì •ë ¬ ì™„ë£Œ.");
 				isList = true;
 				break;
 				
 			case "ls_date_desc":
 				l.sortByDate();
 				l.reverseList();
-				System.out.println("¿ª³¯Â¥¼ø Á¤·Ä ¿Ï·á.");
+				System.out.println("ì—­ë‚ ì§œìˆœ ì •ë ¬ ì™„ë£Œ.");
 				isList = true;
 				break;
 			
@@ -87,7 +87,7 @@ public class TodoMain {
 				break;
 
 			default:
-				System.out.println("Á¤È®ÇÑ ¸Ş´º¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä. µµ¿ò¸»-help");
+				System.out.println("ì •í™•í•œ ë©”ë‰´ëª…ì„ ì…ë ¥í•˜ì„¸ìš”. ë„ì›€ë§-help");
 				break;
 			}
 			

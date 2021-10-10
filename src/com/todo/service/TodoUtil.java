@@ -22,30 +22,30 @@ public class TodoUtil {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("\n"
-				+ "---------Ç×¸ñ Ãß°¡---------\n"
-				+ "Ä«Å×°í¸® ÀÔ·Â > ");
+				+ "---------í•­ëª© ì¶”ê°€---------\n"
+				+ "ì¹´í…Œê³ ë¦¬ ì…ë ¥ > ");
 		
 		category = sc.next();
 		sc.nextLine();
 		
-		System.out.print("Á¦¸ñ ÀÔ·Â > ");
+		System.out.print("ì œëª© ì…ë ¥ > ");
 
 		title = sc.nextLine().trim();
 		if (list.isDuplicate(title)) {
-			System.out.printf("Á¦¸ñ Áßº¹!");
+			System.out.printf("ì œëª© ì¤‘ë³µ!");
 			return;
 		}
 
 
-		System.out.print("³»¿ë ÀÔ·Â > ");
+		System.out.print("ë‚´ìš© ì…ë ¥ > ");
 		desc = sc.nextLine().trim();
 		
-		System.out.print("¸¶°¨½Ã°£ ÀÔ·Â >");
+		System.out.print("ë§ˆê°ì‹œê°„ ì…ë ¥ >");
 		due_date = sc.nextLine().trim();
 
 		TodoItem t = new TodoItem(title, desc, category, due_date);
 		list.addItem(t);
-		System.out.println("Ãß°¡ ¿Ï·á. ");
+		System.out.println("ì¶”ê°€ ì™„ë£Œ. ");
 	}
 
 	public static void deleteItem(TodoList l) {
@@ -54,8 +54,8 @@ public class TodoUtil {
 
 
 		System.out.print("\n"
-				+ "---------Ç×¸ñ »èÁ¦---------\n"
-				+ "»èÁ¦ÇÒ ¹øÈ£¸¦ ÀÔ·Â > ");
+				+ "---------í•­ëª© ì‚­ì œ---------\n"
+				+ "ì‚­ì œí•  ë²ˆí˜¸ë¥¼ ì…ë ¥ > ");
 
 		int number = sc.nextInt();
 		
@@ -65,11 +65,11 @@ public class TodoUtil {
 			count++;
 			if (number == count) {
 				System.out.println(count+"."+item.toString());
-				System.out.print("À§ Ç×¸ñÀ» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î? y/n ");
+				System.out.print("ìœ„ í•­ëª©ì„ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? y/n ");
 				char user = sc.next().charAt(0);
 				if(user == 'y') {
 					l.deleteItem(item);
-					System.out.println("»èÁ¦ ¿Ï·á. ");
+					System.out.println("ì‚­ì œ ì™„ë£Œ. ");
 				}
 				break;
 			}
@@ -82,8 +82,8 @@ public class TodoUtil {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("\n"
-				+ "---------Ç×¸ñ ¼öÁ¤---------\n"
-				+ "¼öÁ¤ÇÒ Ç×¸ñ ¹øÈ£ > ");
+				+ "---------í•­ëª© ìˆ˜ì •---------\n"
+				+ "ìˆ˜ì •í•  í•­ëª© ë²ˆí˜¸ > ");
 		
 		int count=0;
 		
@@ -93,26 +93,26 @@ public class TodoUtil {
 		
 		int number = sc.nextInt();
 		if(number < 0 || number > count) {
-			System.out.println("¹øÈ£°¡ Á¸ÀçÇÏÁö ¾ÊÀ½.");
+			System.out.println("ë²ˆí˜¸ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŒ.");
 			return;
 		}
 		
-		System.out.print("»õ·Î¿î Ä«Å×°í¸® >");
+		System.out.print("ìƒˆë¡œìš´ ì¹´í…Œê³ ë¦¬ >");
 		String new_category = sc.next().trim();
 		sc.nextLine();
 
 
-		System.out.print("»õ·Î¿î Á¦¸ñ > ");
+		System.out.print("ìƒˆë¡œìš´ ì œëª© > ");
 		String new_title = sc.nextLine().trim();
 		if (l.isDuplicate(new_title)) {
-			System.out.println("Á¦¸ñ Áßº¹!");
+			System.out.println("ì œëª© ì¤‘ë³µ!");
 			return;
 		}
 
-		System.out.print("»õ·Î¿î ³»¿ë > ");
+		System.out.print("ìƒˆë¡œìš´ ë‚´ìš© > ");
 		String new_description = sc.nextLine().trim();
 		
-		System.out.print("»õ·Î¿î ¸¶°¨½Ã°£ >");
+		System.out.print("ìƒˆë¡œìš´ ë§ˆê°ì‹œê°„ >");
 		String new_due_date = sc.next().trim();
 		
 		int count2=0;
@@ -123,7 +123,7 @@ public class TodoUtil {
 				l.deleteItem(item);
 				TodoItem t = new TodoItem(new_title, new_description, new_category, new_due_date);
 				l.addItem(t);
-				System.out.print("¼öÁ¤ ¿Ï·á.");
+				System.out.print("ìˆ˜ì • ì™„ë£Œ.");
 			}
 		}
 
@@ -135,7 +135,7 @@ public class TodoUtil {
 		for (TodoItem item : l.getList()) {
 			count++;
 		} 
-		System.out.println("ÀüÃ¼¸ñ·Ï - ÃÑ "+count+"°³");
+		System.out.println("ì „ì²´ëª©ë¡ - ì´ "+count+"ê°œ");
 		int count2=0;
 		for (TodoItem item : l.getList()) {
 			count2++;
@@ -155,7 +155,7 @@ public class TodoUtil {
 		    if(iter.hasNext()) System.out.print(" / ");
 		}
 		System.out.println();
-		System.out.println("ÃÑ "+set.size()+"°³ÀÇ Ä«Å×°í¸® Á¸Àç");
+		System.out.println("ì´ "+set.size()+"ê°œì˜ ì¹´í…Œê³ ë¦¬ ì¡´ì¬");
 	}
 
 	public static void loadList(TodoList l, String filename ) {
@@ -181,15 +181,15 @@ public class TodoUtil {
 				count++;
 			}
 			if(count ==0) {
-				System.out.println("ºÒ·¯¿Ã Ç×¸ñÀÌ ¾ø½À´Ï´Ù.");
+				System.out.println("ë¶ˆëŸ¬ì˜¬ í•­ëª©ì´ ì—†ìŠµë‹ˆë‹¤.");
 			}
 			else {
-				System.out.println(count+"°³ÀÇ Ç×¸ñÀ» ºÒ·¯¿Ô½À´Ï´Ù.");
+				System.out.println(count+"ê°œì˜ í•­ëª©ì„ ë¶ˆëŸ¬ì™”ìŠµë‹ˆë‹¤.");
 			}
 			br.close();
 		}
 		catch (IOException e) {
-			System.out.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾øÀ½.");
+			System.out.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŒ.");
 		}
 	}
 
@@ -206,7 +206,7 @@ public class TodoUtil {
 
 			w.close();
 
-			System.out.println("¸ğµç ³»¿ë ÀúÀå ¿Ï·á.");
+			System.out.println("ëª¨ë“  ë‚´ìš© ì €ì¥ ì™„ë£Œ.");
 		} catch (IOException e) {
 		}
 
@@ -222,7 +222,7 @@ public class TodoUtil {
 			
 			}
 		}
-		System.out.println("ÃÑ "+count2+"°³ÀÇ Ç×¸ñ Ã£À½");
+		System.out.println("ì´ "+count2+"ê°œì˜ í•­ëª© ì°¾ìŒ");
 	}
 	
 	public static void find_cate(TodoList l, String cate) {
@@ -234,7 +234,7 @@ public class TodoUtil {
 				count2++;
 			}
 		}
-		System.out.println("ÃÑ "+count2+"°³ÀÇ Ç×¸ñ Ã£À½");
+		System.out.println("ì´ "+count2+"ê°œì˜ í•­ëª© ì°¾ìŒ");
 	}
 	
 }

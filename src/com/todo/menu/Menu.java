@@ -3,22 +3,22 @@ public class Menu {
 
     public static void displaymenu()
     {
-        System.out.println("---------------¸Þ´º---------------");
-        System.out.println("[add] Ç×¸ñ Ãß°¡");
-        System.out.println("[del] Ç×¸ñ »èÁ¦");
-        System.out.println("[edit] Ç×¸ñ ¼öÁ¤");
-        System.out.println("[ls] ÀüÃ¼ ¸®½ºÆ®");
-        System.out.println("[ls_cate] Ä«Å×°í¸® ¸®½ºÆ®");
-        System.out.println("[ls_name_asc] ¸®½ºÆ® Á¦¸ñ¼ø Á¤·Ä");
-        System.out.println("[ls_name_desc] ¸®½ºÆ® ¿ªÁ¦¸ñ¼ø Á¤·Ä");
-        System.out.println("[ls_date] ¸®½ºÆ® ³¯Â¥¼ø Á¤·Ä");
-        System.out.println("[ls_date_desc] ¸®½ºÆ® ¿ª³¯Â¥¼ø Á¤·Ä");
-        System.out.println("[help] µµ¿ò¸» - ¸Þ´º Ãâ·Â");
-        System.out.println("[find] Á¦¸ñ&³»¿ë °Ë»ö");
-        System.out.println("[find_cate] Ä«Å×°í¸® °Ë»ö");
-        System.out.println("[exit] Á¾·á");
+        System.out.println("---------------ë©”ë‰´---------------");
+        System.out.println("[add] í•­ëª© ì¶”ê°€");
+        System.out.println("[del] í•­ëª© ì‚­ì œ");
+        System.out.println("[edit] í•­ëª© ìˆ˜ì •");
+        System.out.println("[ls] ì „ì²´ ë¦¬ìŠ¤íŠ¸");
+        System.out.println("[ls_cate] ì¹´í…Œê³ ë¦¬ ë¦¬ìŠ¤íŠ¸");
+        System.out.println("[ls_name_asc] ë¦¬ìŠ¤íŠ¸ ì œëª©ìˆœ ì •ë ¬");
+        System.out.println("[ls_name_desc] ë¦¬ìŠ¤íŠ¸ ì—­ì œëª©ìˆœ ì •ë ¬");
+        System.out.println("[ls_date] ë¦¬ìŠ¤íŠ¸ ë‚ ì§œìˆœ ì •ë ¬");
+        System.out.println("[ls_date_desc] ë¦¬ìŠ¤íŠ¸ ì—­ë‚ ì§œìˆœ ì •ë ¬");
+        System.out.println("[help] ë„ì›€ë§ - ë©”ë‰´ ì¶œë ¥");
+        System.out.println("[find] ì œëª©&ë‚´ìš© ê²€ìƒ‰");
+        System.out.println("[find_cate] ì¹´í…Œê³ ë¦¬ ê²€ìƒ‰");
+        System.out.println("[exit] ì¢…ë£Œ");
     }
     public static void prompt() {
-    	System.out.print("\n¸Þ´ºÀÔ·Â > ");
+    	System.out.print("\në©”ë‰´ìž…ë ¥ > ");
     }
 }
