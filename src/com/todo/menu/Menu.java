@@ -9,7 +9,7 @@ public class Menu {
         System.out.println("[edit] 항목 수정");
         System.out.println("[ls] 전체 리스트");
         System.out.println("[ls_cate] 카테고리 리스트");
-        System.out.println("[ls_name_asc] 리스트 제목순 정렬");
+        System.out.println("[ls_name] 리스트 제목순 정렬");
         System.out.println("[ls_name_desc] 리스트 역제목순 정렬");
         System.out.println("[ls_date] 리스트 날짜순 정렬");
         System.out.println("[ls_date_desc] 리스트 역날짜순 정렬");

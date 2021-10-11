@@ -4,11 +4,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TodoItem {
-    private String title;
+	private int id;
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	private String title;
     private String desc;
     private String current_date;
     private String category;
     private String due_date;
+	public String getId;
 
 
     public TodoItem() {
@@ -67,11 +77,13 @@ public class TodoItem {
 
 	@Override
 	public String toString() {
-		return "[" + category + "]"+ title +" - "+ desc + " - " + due_date + " - "+ current_date;
+		return id +  " [" + category + "]"+ title +" - "+ desc + " - " + due_date + " - "+ current_date;
 		
 	}
 
 	public String toSaveString() {
 		return category + "##" + title + "##" + desc + "##" + due_date + "##" + current_date + "\n";
 	}
+
+	
 }
