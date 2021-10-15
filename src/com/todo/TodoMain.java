@@ -12,20 +12,13 @@ public class TodoMain {
 	
 		Scanner sc = new Scanner(System.in);
 		TodoList l = new TodoList();
-		boolean isList = false;
 		boolean quit = false;
 		//l.importData("todolist.txt");
 		Menu.displaymenu();
 		do {
 			Menu.prompt();
-			isList = false;
 			String choice = sc.next();
 			switch (choice) {
-			
-			case "find":
-				String keyword = sc.nextLine().trim();
-				TodoUtil.findList(l, keyword);
-				break;
 
 			case "add":
 				TodoUtil.createItem(l);
@@ -40,7 +33,7 @@ public class TodoMain {
 				break;
 				
 			case "ls":
-				isList = true;
+				TodoUtil.listAll(l);
 				break;
 			
 			case "ls_cate":
@@ -67,10 +60,49 @@ public class TodoMain {
 				TodoUtil.listAll(l, "due_date", 0);
 				break;
 			
+			case "ls_importance":
+				System.out.println("중요도순 정렬 완료.");
+				TodoUtil.listAll(l, "importance", 0);
+				break;
+			
+			case "ls_importance_desc":
+				System.out.println("역중요도순 정렬 완료.");
+				TodoUtil.listAll(l, "importance", 1);
+				break;
+			
+			case "ls_duedate":
+				System.out.println("마감시간순 정렬 완료.");
+				TodoUtil.listAll(l, "due_date", 1);
+				break;
+				
+			case "ls_duedate_desc":
+				System.out.println("역마감시간순 정렬 완료.");
+				TodoUtil.listAll(l, "due_date", 0);
+				break;
+			
+			case "comp":
+				String index = sc.nextLine();
+				TodoUtil.completeItem(l, index);
+				break;
+				
+			case "comp_cancel":
+				String index2 = sc.nextLine();
+				TodoUtil.completeCancleItem(l, index2);
+				break;
+			
+			case "ls_comp":
+				System.out.println("완료항목 정렬 완료.");
+				TodoUtil.compliteAll(l);
+				break;
+			
 			case "help":
 				Menu.displaymenu();
 				break;
 				
+			case "find":
+				String keyword = sc.nextLine().trim();
+				TodoUtil.findList(l, keyword);
+				break;
 			
 			case "find_cate":
 				String cate = sc.nextLine().trim();
@@ -85,10 +117,7 @@ public class TodoMain {
 				System.out.println("정확한 메뉴명을 입력하세요. 도움말-help");
 				break;
 			}
-			
-			//if(isList) TodoUtil.listAll(l);
 		} while (!quit);
-		//TodoUtil.saveList(l, "todolist.txt");
 		TodoList.closeConnection();
 	}
 }

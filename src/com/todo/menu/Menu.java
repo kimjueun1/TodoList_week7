@@ -13,6 +13,13 @@ public class Menu {
         System.out.println("[ls_name_desc] 리스트 역제목순 정렬");
         System.out.println("[ls_date] 리스트 날짜순 정렬");
         System.out.println("[ls_date_desc] 리스트 역날짜순 정렬");
+        System.out.println("[ls_importance] 리스트 중요도순 정렬");
+        System.out.println("[ls_importance_desc] 리스트 역중요도순 정렬");
+        System.out.println("[ls_duedate] 리스트 마감순 정렬");
+        System.out.println("[ls_duedate_desc] 리스트 역마감순 정렬");
+        System.out.println("[comp] 완료 체크");
+        System.out.println("[comp_cancel] 완료 체크 해제");
+        System.out.println("[ls_comp] 완료 항목 리스트");
         System.out.println("[help] 도움말 - 메뉴 출력");
         System.out.println("[find] 제목&내용 검색");
         System.out.println("[find_cate] 카테고리 검색");

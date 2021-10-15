@@ -19,13 +19,41 @@ public class TodoItem {
     private String category;
     private String due_date;
 	public String getId;
+	private int is_completed;
+	private String importance;
+	private String time;
 
+	
+	public String getImportance() {
+		return importance;
+	}
 
-    public TodoItem() {
+	public void setImportance(String importance) {
+		this.importance = importance;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getGetId() {
+		return getId;
+	}
+
+	public void setGetId(String getId) {
+		this.getId = getId;
+	}
+
+	public TodoItem() {
 		super();
 	}
 
-	public TodoItem(String title, String desc, String category, String due_date){
+
+	public TodoItem(String title, String desc, String category, String due_date, String importance, String time){
         this.title=title;
         this.desc=desc;
         SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd kk:mm:ss");
@@ -33,6 +61,8 @@ public class TodoItem {
         
         this.category = category;
         this.due_date = due_date;
+        this.importance = importance;
+        this.time = time;
     }
     
     public String getCategory() {
@@ -74,10 +104,40 @@ public class TodoItem {
     public void setCurrent_date(String current_date) {
         this.current_date = current_date;
     }
+    
+	public int getIs_completed() {
+		return is_completed;
+	}
+
+	public void setIs_completed(int is_completed) {
+		this.is_completed = is_completed;
+	}
 
 	@Override
 	public String toString() {
-		return id +  " [" + category + "]"+ title +" - "+ desc + " - " + due_date + " - "+ current_date;
+		String star = "";
+		if(importance.equals("1")) {
+			star = "  ★☆☆☆☆ ";
+		}
+		if(importance.equals("2")) {
+			star = "  ★★☆☆☆ ";
+		}
+		if(importance.equals("3")) {
+			star = "  ★★★☆☆ ";
+		}
+		if(importance.equals("4")) {
+			star = "  ★★★★☆ ";
+		}
+		if(importance.equals("5")) {
+			star = "  ★★★★★ ";
+		}
+		
+		if(is_completed == 1) {
+			String check = "  [V] ";
+			return id + star + "필요시간 " + time + "시간" +  " [" + category + "]"+ title + " - "+ desc + " - " + due_date + " - "+ current_date + check;
+		}
+		else return id + star + "필요시간 " + time + "시간" + " [" + category + "]"+ title + " - "+ desc + " - " + due_date + " - "+ current_date;
+		
 		
 	}
 
