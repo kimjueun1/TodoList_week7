@@ -70,16 +70,6 @@ public class TodoMain {
 				TodoUtil.listAll(l, "importance", 1);
 				break;
 			
-			case "ls_duedate":
-				System.out.println("마감시간순 정렬 완료.");
-				TodoUtil.listAll(l, "due_date", 1);
-				break;
-				
-			case "ls_duedate_desc":
-				System.out.println("역마감시간순 정렬 완료.");
-				TodoUtil.listAll(l, "due_date", 0);
-				break;
-			
 			case "ls_category_ver":
 				System.out.println("카테고리 이름순 정렬 완료.");
 				TodoUtil.listAll(l, "category", 1);
