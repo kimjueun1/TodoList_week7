@@ -64,7 +64,7 @@ public class TodoList {
 	}
 
 	public int updateItem(TodoItem t) {
-		String sql = "update list set title=?, desc=?, category=?, current_date=?, due_date=?, is_completed, importance, time" + " where id = ?;";
+		String sql = "update list set title=?, desc=?, category=?, current_date=?, due_date=?, importance=?, time=?" + " where id = ?;";
 		PreparedStatement pstmt;
 		int count=0;
 		try {
@@ -74,9 +74,10 @@ public class TodoList {
 			pstmt.setString(3, t.getCategory());
 			pstmt.setString(4, t.getCurrent_date());
 			pstmt.setString(5, t.getDue_date());
-			pstmt.setInt(6, t.getIs_completed());
-			pstmt.setString(7, t.getImportance());
-			pstmt.setString(8, t.getTime());
+			//pstmt.setInt(6, t.getIs_completed());
+			pstmt.setString(6, t.getImportance());
+			pstmt.setString(7, t.getTime());
+			pstmt.setInt(8, t.getId());
 			count = pstmt.executeUpdate();
 			pstmt.close();
 			

@@ -134,9 +134,9 @@ public class TodoItem {
 		
 		if(is_completed == 1) {
 			String check = "  [V] ";
-			return id + star + "필요시간 " + time + "시간" +  " [" + category + "]"+ title + " - "+ desc + " - " + due_date + " - "+ current_date + check;
+			return id + star + " [" + category + "]"+ title + " - "+ desc + " - " + due_date + " - " + current_date + " - 필요시간 " + time + "시간"+ check;
 		}
-		else return id + star + "필요시간 " + time + "시간" + " [" + category + "]"+ title + " - "+ desc + " - " + due_date + " - "+ current_date;
+		else return id + star + " [" + category + "]"+ title + " - "+ desc + " - " + due_date + " - " + current_date + " - 필요시간 " + time + "시간";
 		
 		
 	}

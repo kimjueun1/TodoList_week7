@@ -110,13 +110,14 @@ public class TodoUtil {
 		String new_due_date = sc.next().trim();
 
 		System.out.print("새로운 중요도 입력(1-5) > ");
-		String new_importance = sc.nextLine().trim();
+		String new_importance = sc.next().trim();
 
 		System.out.print("새로운 예상 소요시간 입력(단위:시) > ");
-		String new_time = sc.nextLine().trim();
+		String new_time = sc.next().trim();
 
 		TodoItem t = new TodoItem(new_title, new_description, new_category, new_due_date, new_importance, new_time);
 		t.setId(index);
+		//t.setIs_completed(t.getIs_completed());
 		if(l.updateItem(t) > 0)
 			System.out.println("수정 완료");
 

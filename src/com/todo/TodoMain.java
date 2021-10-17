@@ -80,6 +80,16 @@ public class TodoMain {
 				TodoUtil.listAll(l, "due_date", 0);
 				break;
 			
+			case "ls_category_ver":
+				System.out.println("카테고리 이름순 정렬 완료.");
+				TodoUtil.listAll(l, "category", 1);
+				break;
+			
+			case "ls_category_ver_desc":
+				System.out.println("카테고리 역이름순 정렬 완료.");
+				TodoUtil.listAll(l, "category", 0);
+				break;
+			
 			case "comp":
 				String index = sc.nextLine();
 				TodoUtil.completeItem(l, index);
